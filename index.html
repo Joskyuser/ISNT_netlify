@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscription - ISNT</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 620px;
+      overflow: hidden;
+    }
+
+    .header {
+      background: #1a3c6e;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .header p {
+      font-size: 14px;
+      margin-top: 6px;
+      opacity: 0.85;
+    }
+
+    .form-body {
+      padding: 30px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a3c6e;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 20px 0 12px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+    }
+
+    .row {
+      display: flex;
+      gap: 15px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+      flex: 1;
+    }
+
+    label {
+      font-size: 13px;
+      color: #4a5568;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    input, select {
+      padding: 10px 14px;
+      border: 1px solid #cbd5e0;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #2d3748;
+      background: #f7fafc;
+      transition: border 0.2s;
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      border-color: #1a3c6e;
+      background: white;
+    }
+
+    .required {
+      color: #e53e3e;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 13px;
+      background: #1a3c6e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #153160;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 12px;
+      color: #a0aec0;
+      padding: 15px 30px;
+      border-top: 1px solid #e2e8f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎓 ISNT</h1>
+      <p>Institut Supérieur des Nouvelles Technologies<br/>Formulaire d'inscription étudiant</p>
+    </div>
+
+    <div class="form-body">
+
+      <!-- Informations personnelles -->
+      <div class="section-title">Informations personnelles</div>
+
+      <div class="row">
+        <div class="field">
+          <label>Nom <span class="required">*</span></label>
+          <input type="text" placeholder="Ex: KOUASSI" />
+        </div>
+        <div class="field">
+          <label>Prénom(s) <span class="required">*</span></label>
+          <input type="text" placeholder="Ex: Jean-Pierre" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>Date de naissance <span class="required">*</span></label>
+          <input type="date" />
+        </div>
+        <div class="field">
+          <label>Sexe <span class="required">*</span></label>
+          <select>
+            <option value="">-- Sélectionner --</option>
+            <option>Masculin</option>
+            <option>Féminin</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Lieu de naissance <span class="required">*</span></label>
+        <input type="text" placeholder="Ex: Abidjan" />
+      </div>
+
+      <div class="field">
+        <label>Nationalité <span class="required">*</span></label>
+        <input type="text" placeholder="Ex: Ivoirienne" />
+      </div>
+
+      <!-- Coordonnées -->
+      <div class="section-title">Coordonnées</div>
+
+      <div class="field">
+        <label>Adresse complète <span class="required">*</span></label>
+        <input type="text" placeholder="Ex: Cocody, Rue des Jardins, Abidjan" />
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label>Téléphone <span class="required">*</span></label>
+          <input type="tel" placeholder="Ex: +225 07 00 00 00 00" />
+        </div>
+        <div class="field">
+          <label>Email <span class="required">*</span></label>
+          <input type="email" placeholder="Ex: jean@email.com" />
+        </div>
+      </div>
+
+      <!-- Informations académiques -->
+      <div class="section-title">Informations académiques</div>
+
+      <div class="row">
+        <div class="field">
+          <label>Filière souhaitée <span class="required">*</span></label>
+          <select>
+            <option value="">-- Sélectionner --</option>
+            <option>Informatique</option>
+            <option>Réseaux & Télécommunications</option>
+            <option>Génie Logiciel</option>
+            <option>Cybersécurité</option>
+            <option>Intelligence Artificielle</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Niveau d'entrée <span class="required">*</span></label>
+          <select>
+            <option value="">-- Sélectionner --</option>
+            <option>Licence 1</option>
+            <option>Licence 2</option>
+            <option>Licence 3</option>
+            <option>Master 1</option>
+            <option>Master 2</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Dernier diplôme obtenu <span class="required">*</span></label>
+        <select>
+          <option value="">-- Sélectionner --</option>
+          <option>Baccalauréat</option>
+          <option>BTS / DUT</option>
+          <option>Licence</option>
+          <option>Master</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Année d'obtention <span class="required">*</span></label>
+        <input type="number" placeholder="Ex: 2024" min="2000" max="2025" />
+      </div>
+
+      <button class="btn">Soumettre ma demande d'inscription</button>
+    </div>
+
+    <div class="footer-note">
+      Les champs marqués d'un <span style="color:#e53e3e">*</span> sont obligatoires.<br/>
+      © 2025 ISNT — Institut Supérieur des Nouvelles Technologies
+    </div>
+  </div>
+</body>
+</html>
